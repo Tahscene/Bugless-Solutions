@@ -7,9 +7,17 @@
     transition: opacity .5s ease-out, visibility 0s linear .5s;
     z-index: 99999;
 }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 /* Gradient background on top and bottom */
 .custom-carousel-bg {
-    
     padding: 100px 0;
 }
 
@@ -25,12 +33,13 @@
     box-shadow: none;
     padding: 30px 10px;
 }
-.custom-black-text{
-    color:black;
+.custom-black-text {
+    color: black;
 }
-.custom-white-text{
-    color:white;
+.custom-white-text {
+    color: white;
 }
+
 /* Text styling */
 .custom-caption-box h3,
 .custom-caption-box h5 {
@@ -42,6 +51,20 @@
     color: #333;
     font-size: 18px;
     animation: slideInUp 1.5s ease-in-out forwards;
+}
+
+/* Mobile fix for color changes */
+@media (max-width: 768px) {
+    .custom-caption-box h3,
+    .custom-caption-box h5 {
+        color: #4169E1 !important;
+    }
+    .custom-caption-box p {
+        color: #333 !important;
+    }
+    .custom-caption-box {
+        background: transparent !important;
+    }
 }
 
 /* Button styling */
@@ -78,15 +101,13 @@
     animation: slideInUp 1s ease;
 }
 
-/* Responsive adjustments for tablets and smaller devices */
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .carousel-img {
         object-fit: contain;
         max-height: 70vh;
     }
 }
-
-/* Additional tweak for smaller devices like iPhone 13 */
 @media (max-width: 430px) {
     .carousel-img {
         max-height: 60vh;
@@ -94,38 +115,34 @@
     }
 }
 
-
-
-
+/* Headline styling */
 .headline {
     text-align: center;
     font-family: 'Arial', sans-serif;
     line-height: 1.2;
     margin: 10px 0;
-  }
-  
-  .bugless {
+}
+.bugless {
     color: black;
     font-size: 2em;
     font-weight: bold;
     letter-spacing: 2px;
-  }
-  
-  .solutions {
+}
+.solutions {
     color: #4169E1;
-;
     font-size: 1.8em;
     font-weight: bold;
     letter-spacing: 2px;
-  }
-  
+}
+
+/* Spinner */
 #spinner.show {
     transition: opacity .5s ease-out, visibility 0s linear 0s;
     visibility: visible;
     opacity: 1;
 }
-/*** Spinner End ***/
 
+/* Back to top button */
 .back-to-top {
     position: fixed;
     right: 30px;
@@ -139,35 +156,10 @@
     z-index: 99;
 }
 
-/*** Button Start ***/
+/*** Buttons ***/
 .btn {
     font-weight: 600;
     transition: .5s;
-}
-
-.btn-square {
-    width: 32px;
-    height: 32px;
-}
-
-.btn-sm-square {
-    width: 34px;
-    height: 34px;
-}
-
-.btn-md-square {
-    width: 44px;
-    height: 44px;
-}
-
-.btn-lg-square {
-    width: 56px;
-    height: 56px;
-}
-
-.btn-xl-square {
-    width: 66px;
-    height: 66px;
 }
 
 .btn-square,
@@ -183,6 +175,12 @@
     border-radius: 50%;
 }
 
+.btn-square { width: 32px; height: 32px; }
+.btn-sm-square { width: 34px; height: 34px; }
+.btn-md-square { width: 44px; height: 44px; }
+.btn-lg-square { width: 56px; height: 56px; }
+.btn-xl-square { width: 66px; height: 66px; }
+
 .btn.btn-primary {
     background: var(--bs-primary) !important;
     color: var(--bs-white) !important;
@@ -191,7 +189,6 @@
     font-weight: 400;
     transition: 0.5s;
 }
-
 .btn.btn-primary:hover {
     background: var(--bs-dark) !important;
     color: var(--bs-light) !important;
@@ -205,7 +202,6 @@
     font-weight: 400;
     transition: 0.5s;
 }
-
 .btn.btn-dark:hover {
     background: var(--bs-white) !important;
     color: var(--bs-dark) !important;
@@ -219,39 +215,28 @@
     font-weight: 400;
     transition: 0.5s;
 }
-
 .btn.btn-light:hover {
     background: var(--bs-white) !important;
     color: var(--bs-dark) !important;
 }
-/*** Topbar Start ***/
+
+/*** Topbar ***/
 .topbar {
     padding: 2px 10px 2px 20px;
     background: var(--bs-dark) !important;
 }
-
 @media (max-width: 768px) {
     .topbar {
         display: none;    
     }
 }
-/*** Topbar End ***/
 
-/*** Navbar ***/
-/* ===== FIX: Mobile Navbar Sticky and Overflow ===== */
-/* ===== Navbar & Gap Fixes ===== */
-/* ===== FIX: Mobile Navbar Sticky and Overflow ===== */
-
-/* ===== FIX: Mobile Navbar Sticky and Overflow ===== */
-
-/* Disable sticky behavior on mobile */
+/*** Navbar Fixes ***/
 @media (max-width: 991px) {
     .sticky-top {
         position: static !important;
     }
 
-    /* Allow collapsed nav to scroll if it overflows */
- 
     .navbar-collapse {
         position: absolute;
         top: 100%;
@@ -262,25 +247,13 @@
         max-height: 80vh;
         overflow-y: auto;
         transition: all 0.3s ease-in-out;
+        padding: 10px 0;
     }
 
-    .navbar-collapse.collapsing,
-    .navbar-collapse.show {
-        display: block;
-    }
-
-    .navbar-collapse.collapse {
-        display: none !important;
-    }
-
-    .navbar .navbar-nav .nav-item {
-        text-align: center;
-    }
+    /* Removed display: none !important to allow Bootstrap toggle to work */
 }
 
-
-
-/* Improve dropdown visibility and control */
+/* Dropdown control */
 .navbar .nav-item .dropdown-menu {
     display: none;
     visibility: hidden;
@@ -289,8 +262,6 @@
     transform-origin: top;
     transition: 0.5s;
 }
-
-/* Show dropdown on hover or focus (desktop) */
 @media (min-width: 992px) {
     .navbar .nav-item:hover .dropdown-menu,
     .navbar .nav-item:focus-within .dropdown-menu {
@@ -303,12 +274,11 @@
     }
 }
 
-/* Styling navbar links on hover and active states */
+/* Navbar link styles */
 .navbar .navbar-nav .nav-item.nav-link,
 .navbar .navbar-nav .nav-link {
     color: var(--bs-dark) !important;
 }
-
 .navbar .navbar-nav .nav-item:hover .nav-link,
 .navbar .navbar-nav .nav-item.active .nav-link,
 .sticky-top .navbar .navbar-nav .nav-link:hover,
@@ -316,12 +286,11 @@
     color: var(--bs-primary) !important;
 }
 
-/* Add a nice hover effect on nav items */
+/* Nav item animation */
 .navbar .navbar-nav .nav-item {
     position: relative;
     margin: 0 5px !important;
 }
-
 .navbar .navbar-nav .nav-item::before,
 .navbar .navbar-nav .nav-item::after {
     position: absolute;
@@ -331,17 +300,14 @@
     border: 0px solid var(--bs-primary);
     transition: 0.5s;
 }
-
 .navbar .navbar-nav .nav-item::before {
     top: 0;
     left: 0;
 }
-
 .navbar .navbar-nav .nav-item::after {
     bottom: 0;
     right: 0;
 }
-
 .navbar .navbar-nav .nav-item:hover::after,
 .navbar .navbar-nav .nav-item:hover::before,
 .navbar .navbar-nav .nav-item.active::after,
@@ -359,27 +325,24 @@
     vertical-align: middle;
 }
 
-/* Adjust the navbar toggler button */
+/* Navbar toggler */
 .navbar .navbar-toggler {
     padding: 8px 15px;
     color: var(--bs-dark);
     background: var(--bs-primary);
 }
 
-/* Fix for search modal */
+/* Search modal */
 #searchModal .modal-content {
     background: rgba(250, 250, 250, .6);
 }
 
-/* ===== END of Navbar CSS ===== */
-
-/* Optional: You may also need some media queries for custom screen sizes */
+/* Extra spacing for nav links on small screen */
 @media (max-width: 991px) {
     .navbar .navbar-nav .nav-item.nav-link {
         margin: 15px 0 !important;
     }
-}
-
+} 
 
 /*** Carousel Header Start ***/
 .header-carousel .header-carousel-item {
