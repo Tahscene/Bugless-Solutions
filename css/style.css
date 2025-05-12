@@ -238,16 +238,65 @@
 /*** Topbar End ***/
 
 /*** Navbar ***/
-.sticky-top,
-.sticky-top .container {
-    transition: 0.5s !important;
+/* ===== FIX: Mobile Navbar Sticky and Overflow ===== */
+
+/* Disable sticky behavior on mobile */
+@media (max-width: 991px) {
+    .sticky-top {
+        position: static !important;
+    }
+
+    /* Allow collapsed nav to scroll if it overflows */
+    .navbar-collapse {
+        background: white;
+        z-index: 10;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    /* Add spacing for mobile nav items */
+    .navbar .navbar-nav .nav-item.nav-link {
+        margin: 15px 0 !important;
+    }
 }
 
+/* Improve dropdown visibility and control */
+.navbar .nav-item .dropdown-menu {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transform: rotateX(-75deg);
+    transform-origin: top;
+    transition: 0.5s;
+}
+
+/* Show dropdown on hover or focus (desktop) */
+@media (min-width: 992px) {
+    .navbar .nav-item:hover .dropdown-menu,
+    .navbar .nav-item:focus-within .dropdown-menu {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        transform: rotateX(0deg);
+        margin-top: 20px !important;
+        background: var(--bs-light) !important;
+    }
+}
+
+/* Styling navbar links on hover and active states */
 .navbar .navbar-nav .nav-item.nav-link,
 .navbar .navbar-nav .nav-link {
     color: var(--bs-dark) !important;
 }
 
+.navbar .navbar-nav .nav-item:hover .nav-link,
+.navbar .navbar-nav .nav-item.active .nav-link,
+.sticky-top .navbar .navbar-nav .nav-link:hover,
+.sticky-top .navbar .navbar-nav .nav-link.active {
+    color: var(--bs-primary) !important;
+}
+
+/* Add a nice hover effect on nav items */
 .navbar .navbar-nav .nav-item {
     position: relative;
     margin: 0 5px !important;
@@ -267,6 +316,7 @@
     top: 0;
     left: 0;
 }
+
 .navbar .navbar-nav .nav-item::after {
     bottom: 0;
     right: 0;
@@ -280,13 +330,7 @@
     border-width: 1px;
 }
 
-.navbar .navbar-nav .nav-link:hover,
-.navbar .navbar-nav .nav-link.active,
-.sticky-top .navbar .navbar-nav .nav-link:hover,
-.sticky-top .navbar .navbar-nav .nav-link.active {
-    color: var(--bs-primary) !important;
-}
-
+/* Dropdown arrow */
 .navbar .dropdown-toggle::after {
     border: none;
     content: "\f107" !important;
@@ -295,64 +339,51 @@
     vertical-align: middle;
 }
 
-@media (min-width: 1200px) {
-    .navbar .nav-item .dropdown-menu {
-        display: block;
-        visibility: hidden;
-        top: 100%;
-        transform: rotateX(-75deg);
-        transform-origin: 0% 0%;
-        border: 0;
-        border-radius: 10px;
-        margin-top: 20px !important;
-        transition: .5s;
-        opacity: 0;
-        z-index: 9;
-    }
-}
-
-
-
-
-
-@media (max-width: 1200px) {
-    .navbar .nav-item .dropdown-menu {
-        margin-top: 15px !important;
-        transition: 0.5s;
-    }
-}
-
-@media (max-width: 991px) {
-    .navbar .navbar-nav .nav-item.nav-link {
-        margin: 15px 0 !important;
-    }
-
-}
-
-.dropdown .dropdown-menu a:hover {
-    background: var(--bs-primary) !important;
-    color: var(--bs-white);
-}
-
-.navbar .nav-item:hover .dropdown-menu {
-    transform: rotateX(0deg);
-    visibility: visible;
-    background: var(--bs-light) !important;
-    margin-top: 20px !important;
-    transition: .5s;
-    opacity: 1;
-}
-
+/* Adjust the navbar toggler button */
 .navbar .navbar-toggler {
     padding: 8px 15px;
     color: var(--bs-dark);
     background: var(--bs-primary);
 }
 
+/* Fix for search modal */
 #searchModal .modal-content {
     background: rgba(250, 250, 250, .6);
 }
-/*** Navbar End ***/
+
+
+/* ===== Fix for "Start Debugging" button on mobile ===== */
+
+/* Ensure button aligns properly on all screen sizes */
+.d-flex.align-items-center.flex-nowrap {
+    display: flex;
+    justify-content: center; /* Center button on all devices */
+}
+
+/* Button tweaks for mobile */
+@media (max-width: 991px) {
+    .d-flex.align-items-center.flex-nowrap {
+        justify-content: center; /* Make sure the button stays centered */
+        padding-top: 15px; /* Add some space if needed */
+    }
+
+    .btn-start-debugging {
+        width: 100%; /* Make button full width on mobile if necessary */
+        padding: 12px 20px; /* Adjust button padding for mobile */
+    }
+}
+
+/* Button tweaks for desktop and tablet */
+@media (min-width: 992px) {
+    .btn-start-debugging {
+        padding: 10px 25px; /* Adjust padding for larger screens */
+    }
+}
+
+
+/* ===== END of Navbar CSS ===== */
+
+
 
 /*** Carousel Header Start ***/
 .header-carousel .header-carousel-item {
