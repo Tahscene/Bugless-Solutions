@@ -1,45 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="utf-8">
-        <title>Bugless Solutions</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
 
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bugless Solutions</title>
 
-        <!-- Libraries Stylesheet -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        <!-- Customized Bootstrap Stylesheet -->
+    <!-- Icon Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Owl Carousel CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Template CSS -->
+    <link href="css/style.css" rel="stylesheet">
 
-<!-- jQuery + Owl Carousel JS -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+
+    <!-- jQuery & Owl Carousel JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <style>
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                z-index: 1050;
+                max-height: 80vh;
+                overflow-y: auto;
+                transition: all 0.3s ease-in-out;
+            }
+
+            .navbar-collapse.collapse {
+                display: none !important;
+            }
+
+            .navbar-collapse.collapsing,
+            .navbar-collapse.show {
+                display: block;
+            }
+
+            .navbar .navbar-nav .nav-item {
+                text-align: center;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Spinner Start -->
+<div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+<!-- Spinner End -->
+
+<!-- Topbar Start -->
+<div class="container-fluid topbar px-0 d-none d-lg-block">
+    <div class="container px-0">
+        <div class="row gx-0 align-items-center" style="height: 45px;">
+            <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                <div class="d-flex flex-wrap">
+                    <a href="https://g.co/kgs/RJXnF5t" class="text-muted me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find Our Location</a>
+                    <a href="https://wa.me/8801628942091" class="text-muted me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+01628942091</a>
+                    <a href="mailto:noorearafin@gmail.com" class="text-muted me-0"><i class="fas fa-envelope text-primary me-2"></i>noorearafin@gmail.com</a>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-flex align-items-center justify-content-end">
+                    <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-facebook-f text-white"></i></a>
+                    <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-youtube text-white"></i></a>
+                    <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-0"><i class="fab fa-linkedin-in text-white"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+
+<!-- Navbar Start -->
+<div class="container-fluid sticky-top px-0">
+    <div class="position-absolute bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;"></div>
+    <div class="container px-0">
+        <nav class="navbar navbar-expand-md navbar-dark bg-white py-3 px-4">
+            <a href="index.html" class="navbar-brand d-flex align-items-center p-0">
+                <img src="img/icon2.jpeg" alt="Logo" style="height: 60px; width: auto; margin-right: 8px;">
+                <h6 class="headline m-0">
+                    <span class="bugless">BUGLESS</span>
+                    <span class="solutions">SOLUTIONS</span>
+                </h6>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="project.html" class="nav-item nav-link">Projects</a>
+                    <div class="nav-item dropdown active">
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Our Services</a>
+                        <div class="dropdown-menu m-0 custom-dropdown" id="servicesDropdown">
+                            <a href="auto.html" class="dropdown-item">Automation Testing</a>
+                            <a href="man.html" class="dropdown-item">Manual Testing</a>
+                            <a href="perform.html" class="dropdown-item">Performance Testing</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="team.html" class="nav-item nav-link">Our Team</a>
+                </div>
+                <div class="d-flex justify-content-center justify-content-lg-end align-items-center pt-xl-0 mt-3 mt-lg-0">
+                    <a href="service.html" class="btn btn-primary rounded-pill text-white py-2 px-4">Start Debugging</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- Navbar End -->
 
 <!-- Owl Init Script -->
 <script>
@@ -47,8 +144,8 @@ $(document).ready(function(){
   $('.custom-carousel-wrapper').owlCarousel({
       loop: true,
       margin: 0,
-      nav: false,            // Hide arrows
-      dots: true,            // Show dots
+      nav: false,
+      dots: true,
       autoplay: true,
       autoplayTimeout: 5000,
       items: 1,
@@ -59,96 +156,21 @@ $(document).ready(function(){
 });
 </script>
 
+<!-- Collapse Navbar on Link Click -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const navCollapse = document.querySelector('.navbar-collapse');
 
-
-    </head>
-
-    <body>
-
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
-
-
-         <!-- Topbar Start -->
-         <div class="container-fluid topbar px-0 d-none d-lg-block">
-            <div class="container px-0">
-                <div class="row gx-0 align-items-center" style="height: 45px;">
-                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
-                        <div class="d-flex flex-wrap">
-                            <a href="https://g.co/kgs/RJXnF5t" class="text-muted me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find Our Location</a>
-                            <a href="  https://wa.me/8801628942091" class="text-muted me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+01628942091</a>
-                            <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox/FMfcgzQbfBrSnNJgDqGchnmPhGBRHbzm?compose=new" class="text-muted me-0"><i class="fas fa-envelope text-primary me-2"></i>noorearafin@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 text-center text-lg-end">
-                        <div class="d-flex align-items-center justify-content-end">
-                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-facebook-f text-white"></i></a>
-                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-youtube text-white"></i></a>
-                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-0"><i class="fab fa-linkedin-in text-white"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Topbar End -->
-
-
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid sticky-top px-0">
-            <div class="position-absolute bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;">
-            </div>
-            <div class="container px-0">
-                <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3 px-4">
-                    
-                          
-                         <a href="index.html" class="navbar-brand d-flex align-items-center p-0">
-    <img src="img/icon2.jpeg" alt="Logo" style="height: 60px; width: auto; margin-right: 8px;">
-    <h6 class="headline m-0">
-        <span class="bugless">BUGLESS</span>
-        <span class="solutions">SOLUTIONS</span>
-    </h6>
-</a>
-
-
-                    
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                        <span class="fa fa-bars"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <div class="navbar-nav ms-auto py-0">
-                            <a href="index.html" class="nav-item nav-link">Home</a>
-                            
-
-                            <a href="project.html" class="nav-item nav-link">Projects</a>
-                            <div class="nav-item dropdown active">
-                                <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Our Services</a>
-                                <div class="nav-item dropdown">
-                                    
-                                    <div class="dropdown-menu m-0 custom-dropdown" id="servicesDropdown">
-                                        <a href="auto.html" class="dropdown-item">Automation Testing</a>
-                                        <a href="man.html" class="dropdown-item">Manual Testing</a>
-                                        <a href="perform.html" class="dropdown-item">Performance Testing</a>
-                                    </div>
-                                </div>
-                                </div>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
-                            <a href="team.html" class="nav-item nav-link">Our Team</a>
-                        </div>
-                        <div class="d-flex align-items-center flex-nowrap pt-xl-0">
-                 
-                            <a href="service.html" class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0">Start Debugging</a>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
-        <!-- Navbar & Hero End -->
-
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function () {
+            if (navCollapse.classList.contains('show')) {
+                new bootstrap.Collapse(navCollapse).hide();
+            }
+        });
+    });
+});
+</script>
        <!-- Custom Carousel Background Section Start -->
 <div class="custom-carousel-bg">
     <div class="owl-carousel custom-carousel-wrapper">
@@ -713,29 +735,10 @@ $(document).ready(function(){
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const navbarCollapse = document.getElementById('navbarCollapse');
-        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-            toggle: false
-        });
 
-        let lastScrollTop = 0;
-        window.addEventListener('scroll', function () {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-            // Collapse the navbar on scroll down (only on mobile view)
-            if (scrollTop > lastScrollTop && window.innerWidth < 992) {
-                if (navbarCollapse.classList.contains('show')) {
-                    bsCollapse.hide();
-                }
-            }
-
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-        });
-    });
-</script>
-
+<!-- Bootstrap Bundle with Popper (needed for navbar, dropdowns, etc.) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     </body>
 
