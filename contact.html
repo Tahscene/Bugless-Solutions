@@ -42,28 +42,54 @@
         <!-- Spinner End -->
 
 
-     <!-- Topbar Start -->
-     <div class="container-fluid topbar px-0 d-none d-lg-block">
-        <div class="container px-0">
-            <div class="row gx-0 align-items-center" style="height: 45px;">
-                <div class="col-lg-8 text-center text-lg-start mb-lg-0">
-                    <div class="d-flex flex-wrap">
-                        <a href="https://g.co/kgs/RJXnF5t" class="text-muted me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find Our Location</a>
-                        <a href="  https://wa.me/8801628942091" class="text-muted me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+01628942091</a>
-                        <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox/FMfcgzQbfBrSnNJgDqGchnmPhGBRHbzm?compose=new" class="text-muted me-0"><i class="fas fa-envelope text-primary me-2"></i>noorearafin@gmail.com</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 text-center text-lg-end">
-                    <div class="d-flex align-items-center justify-content-end">
-                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-facebook-f text-white"></i></a>
-                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i class="fab fa-youtube text-white"></i></a>
-                        <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-0"><i class="fab fa-linkedin-in text-white"></i></a>
-                    </div>
-                </div>
-            </div>
+
+        
+        <!-- Topbar Start -->
+<div class="container-fluid topbar px-0 d-none d-lg-block">
+  <div class="container px-0">
+    <div class="row gx-0 align-items-center" style="height: 45px;">
+
+      <!-- Back Button Column -->
+      <div class="col-auto">
+        <a href="javascript:history.back()" class="btn btn-sm btn-outline-primary me-3" style="height: 30px; line-height: 16px; padding: 4px 12px;">
+          <i class="fas fa-arrow-left me-1"></i> Back
+        </a>
+      </div>
+
+      <!-- Info Links Column -->
+      <div class="col-lg-7 text-center text-lg-start mb-lg-0">
+        <div class="d-flex flex-wrap">
+          <a href="https://g.co/kgs/RJXnF5t" class="text-muted me-4">
+            <i class="fas fa-map-marker-alt text-primary me-2"></i>Find Our Location
+          </a>
+          <a href="https://wa.me/8801628942091" class="text-muted me-4">
+            <i class="fas fa-phone-alt text-primary me-2"></i>+01628942091
+          </a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=noorearafin@gmail.com" class="text-muted me-0">
+            <i class="fas fa-envelope text-primary me-2"></i>noorearafin@gmail.com
+          </a>
         </div>
+      </div>
+
+      <!-- Social Icons Column -->
+      <div class="col-lg-4 text-center text-lg-end">
+        <div class="d-flex align-items-center justify-content-end">
+          <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3">
+            <i class="fab fa-facebook-f text-white"></i>
+          </a>
+          <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-3">
+            <i class="fab fa-youtube text-white"></i>
+          </a>
+          <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-0">
+            <i class="fab fa-linkedin-in text-white"></i>
+          </a>
+        </div>
+      </div>
+      
     </div>
-    <!-- Topbar End -->
+  </div>
+</div>
+<!-- Topbar End -->
 
  
  <!-- Contact Start -->
@@ -75,126 +101,129 @@
 
   <style>
   body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f9fc;
-    color: #333;
-  }
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f9fc;
+  color: #333;
+}
 
-  .service-bar {
-    display: flex;
-    justify-content: space-around;
-    background: linear-gradient(to right, #ffffff, #f1f3f5);
-    padding: 25px 0;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
-    border-bottom: 1px solid #e0e0e0;
-    border-radius: 0 0 16px 16px;
-  }
+.service-bar {
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(to right, #ffffff, #f1f3f5);
+  padding: 25px 0;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+  border-bottom: 1px solid #e0e0e0;
+  border-radius: 0 0 16px 16px;
+}
 
-  .service {
-    text-align: center;
-    cursor: pointer;
-    padding: 20px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.06);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 120px;
-  }
+.service {
+  text-align: center;
+  cursor: pointer;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  border: 2px solid #007bff; /* Blue border added */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 120px;
+}
 
-  .service:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
-  }
+.service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
 
-  .service i {
-    font-size: 34px;
-    margin-bottom: 10px;
-  }
+.service i {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
 
-  .service.manual i {
-    color: #5c67f2;
-  }
+.service.manual i {
+  color: #5c67f2;
+}
 
-  .service.automation i {
-    color: #28a745;
-  }
+.service.automation i {
+  color: #28a745;
+}
 
-  .service.performance i {
-    color: #e83e8c;
-  }
+.service.performance i {
+  color: #e83e8c;
+}
 
-  .slider {
-    position: fixed;
-    top: 0;
-    right: -400px;
-    width: 400px;
-    height: 100%;
-    background-color: #ffffff;
-    box-shadow: -4px 0 12px rgba(0,0,0,0.1);
-    padding: 30px 25px;
-    transition: right 0.4s ease;
-    z-index: 1000;
-    overflow-y: auto;
-    border-radius: 16px 0 0 16px;
-  }
+.slider {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: -4px 0 12px rgba(0,0,0,0.1);
+  padding: 30px 25px;
+  transition: right 0.4s ease;
+  z-index: 1000;
+  overflow-y: auto;
+  border-radius: 16px 0 0 16px;
+}
 
-  .slider.active {
-    right: 0;
-  }
+.slider.active {
+  right: 0;
+}
 
-  .slider h2 {
-    margin-top: 0;
-    font-size: 24px;
-    color: #333;
-    border-bottom: 2px solid #f0f0f0;
-    padding-bottom: 10px;
-  }
+.slider h2 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #333;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+}
 
-  .test-type {
-    margin: 15px 0;
-    padding: 12px 18px;
-    background: linear-gradient(to right, #e0eafc, #cfdef3);
-    cursor: pointer;
-    border-radius: 10px;
-    font-weight: 500;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: background 0.3s ease;
-  }
+.test-type {
+  margin: 15px 0;
+  padding: 12px 18px;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: 500;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: background 0.3s ease;
+}
 
-  .test-type:hover {
-    background: linear-gradient(to right, #d0dfff, #c1d5f7);
-  }
+.test-type:hover {
+  background: linear-gradient(to right, #d0dfff, #c1d5f7);
+}
 
-  .details-page {
-    display: none;
-    padding: 25px;
-    background-color: #ffffff;
-    margin-top: 25px;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.06);
-  }
+.details-page {
+  display: none;
+  padding: 25px;
+  background-color: #ffffff;
+  margin-top: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+}
 
-  .details-page.active {
-    display: block;
-  }
+.details-page.active {
+  display: block;
+}
 
-  .contact-icons {
-    margin-top: 25px;
-  }
+.contact-icons {
+  margin-top: 25px;
+}
 
-  .contact-icons a {
-    margin-right: 15px;
-    font-size: 26px;
-    color: #555;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
+.contact-icons a {
+  margin-right: 15px;
+  font-size: 26px;
+  color: #555;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
-  .contact-icons a:hover {
-    color: #000;
-  }
+.contact-icons a:hover {
+  color: #000;
+}
+
+/* Updated Close Button Styling */
   .close-button {
   float: right;
   font-size: 22px;
@@ -212,6 +241,8 @@
   color: #333;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
+
 
 
 </style>
@@ -246,10 +277,12 @@
   </div>
 
   <!-- Manual Slider -->
+    
   <div class="slider" id="manual-slider">
+    
     <h2>Manual Testing Types</h2>
-    <button class="close-button" onclick="this.parentElement.classList.remove('active')">&times;</button>
-
+   
+<button class="close-button" onclick="this.parentElement.classList.remove('active')">&times;</button>
     <div class="test-type" onclick="openDetails('manual-ui')">UI Testing - $50</div>
     <div class="test-type" onclick="openDetails('manual-functional')">Functional Testing - $70</div>
     <div class="test-type" onclick="openDetails('manual-regression')">Regression Testing - $60</div>
@@ -481,7 +514,7 @@
           <div class="pb-5">
             <h4 class="text-primary">Book Your Service</h4>
             <h1 class="display-4 mb-4">Reserve Your QA Slot with Bugless Solution</h1>
-            <p class="mb-0">
+            <p class="mb-0 custom-white-text">
               Ready to launch a flawless product? Let <strong>Bugless Solution</strong> be your quality partner!
               Drop us a message today, and let’s eliminate bugs—together.
               <span class="fw-bold text-success">Your software deserves perfection.</span>
@@ -491,7 +524,7 @@
             <div class="bg-primary btn-lg-square rounded-circle p-4">
               <i class="fa fa-home text-white"></i>
             </div>
-            <div class="ms-4">
+            <div class="ms-4 custom-white-text">
               <h4>Addresses</h4>
               <p class="mb-0">118, Bankers Row, Dhaka, Bangladesh</p>
             </div>
@@ -500,7 +533,7 @@
             <div class="bg-primary btn-lg-square rounded-circle p-2">
               <i class="fa fa-phone-alt text-white"></i>
             </div>
-            <div class="ms-4">
+            <div class="ms-4 custom-white-text">
               <h4>Mobile</h4>
               <p class="mb-0">+01628942091</p>
             </div>
@@ -509,7 +542,7 @@
             <div class="bg-primary btn-lg-square rounded-circle p-2">
               <i class="fa fa-envelope-open text-white"></i>
             </div>
-            <div class="ms-4">
+            <div class="ms-4 custom-white-text">
               <h4>Email</h4>
               <p class="mb-0">noorearafin@gmail.com</p>
             </div>

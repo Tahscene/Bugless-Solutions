@@ -31,6 +31,35 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+
+        <!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<!-- jQuery + Owl Carousel JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!-- Owl Init Script -->
+<script>
+$(document).ready(function(){
+  $('.custom-carousel-wrapper').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: false,            // Hide arrows
+      dots: true,            // Show dots
+      autoplay: true,
+      autoplayTimeout: 5000,
+      items: 1,
+      animateOut: 'fadeOut',
+      animateIn: 'fadeIn',
+      smartSpeed: 800
+  });
+});
+</script>
+
+
+
     </head>
 
     <body>
@@ -118,59 +147,288 @@
         </div>
         <!-- Navbar & Hero End -->
 
-        <!-- Carousel Start -->
-        <div class="header-carousel owl-carousel">
-            <div class="header-carousel-item mx-auto">
-               
-                <div class="carousel-caption">
-                    <div class="carousel-caption-inner text-center p-3">
-                        <h5 class="display-1 text-capitalize text-white mb-4 fadeInUp animate__animated"
-    data-animation="fadeInUp" data-delay="1.3s"
-    style="animation-delay: 1.3s; font-family: 'Playfair Display', serif;font-size: 50px;">
-    Precision-Driven Testing for a Bug-Free Experience
-</h5>
-
-                        <p class="mb-5 fs-5 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.5s;">Delivering reliable, scalable QA solutions globally</p>
-                        <a class="btn btn-dark rounded-pill py-3 px-5 mb-4 me-4 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.7s;" href="#">Book Now</a>
-                        <a class="btn btn-dark rounded-pill py-3 px-5 mb-4 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.7s;" href="service.html">Read More</a>
-                    </div>
-                </div>
-            </div>  
-            
-            <div class="header-carousel-item mx-auto">
-               
-                <div class="carousel-caption">
-                    <div class="carousel-caption-inner text-center p-3">
-                        <h3 class="display-1 text-capitalize text-white mb-4" 
-    style="font-family: 'Playfair Display', serif; font-size: 50px;" >
-    From Manual Checks to Smart Automation – We Do It All</h3>
-
-                        <p class="mb-5 fs-5">Expert in Manual & Automation Testing with 95%+ test coverage</p>
-                        <a class="btn btn-dark rounded-pill py-3 px-5 mb-4 me-4" href="#">Book Now</a>
-                        <a class="btn btn-dark rounded-pill py-3 px-5 mb-4" href="service.html">Read More</a>
-                    </div>
-                </div>
-            </div>
+       <!-- Custom Carousel Background Section Start -->
+<div class="custom-carousel-bg">
+    <div class="owl-carousel custom-carousel-wrapper">
         
-            <div class="header-carousel-item mx-auto">
-               
-                <div class="carousel-caption">
-                    <div class="carousel-caption-inner text-center p-3">
-                        <h3 class="display-1 text-capitalize text-white mb-4" 
-    style="font-family: 'Playfair Display', serif; font-size: 50px;">
-    Your Product Deserves Zero Bugs. We Deliver That
-</h3>
-                        <p class="mb-5 fs-5">Streamline your QA Process with Bugless Solution</p>
-                        <a class="btn btn-dark rounded-pill py-3 px-5 mb-4 me-4" href="#">Book Now</a>
-                        <a class="btn btn-dark rounded-pill py-3 px-5 mb-4" href="service.html">Read More</a>
+        <!-- Carousel Item 1 -->
+        <div class="custom-carousel-item mx-auto">
+            <div class="custom-caption-box text-center p-3">
+                <h5 class="display-5 mb-4 text-capitalize fadeInUp animate__animated"
+                    data-animation="fadeInUp" data-delay="1.3s"
+                    style="animation-delay: 1.3s; font-family: 'Playfair Display', serif; font-size: 50px;">
+                    Precision-Driven Testing for a Bug-Free Experience
+                </h5>
+                <p class="mb-5 fs-5 fadeInUp animate__animated"
+                   data-animation="fadeInUp" data-delay="1.5s"
+                   style="animation-delay: 1.5s;">
+                    Delivering reliable, scalable QA solutions globally
+                </p>
+                <a class="btn btn-dark rounded-pill py-3 px-5 mb-4 me-4 fadeInUp animate__animated"
+                   data-animation="fadeInUp" data-delay="1.7s" style="animation-delay: 1.7s;" href="#">
+                    Book Now
+                </a>
+                <a class="btn btn-dark rounded-pill py-3 px-5 mb-4 fadeInUp animate__animated"
+                   data-animation="fadeInUp" data-delay="1.7s" style="animation-delay: 1.7s;" href="service.html">
+                    Read More
+                </a>
+            </div>
+        </div>
+
+        <!-- Carousel Item 2 -->
+        <div class="custom-carousel-item mx-auto">
+            <div class="custom-caption-box text-center p-3">
+                <h3 class="display-5 mb-4 text-capitalize"
+                    style="font-family: 'Playfair Display', serif; font-size: 50px;">
+                    From Manual Checks to Smart Automation – We Do It All
+                </h3>
+                <p class="mb-5 fs-5">
+                    Expert in Manual & Automation Testing with 95%+ test coverage
+                </p>
+                <a class="btn btn-dark rounded-pill py-3 px-5 mb-4 me-4" href="#">Book Now</a>
+                <a class="btn btn-dark rounded-pill py-3 px-5 mb-4" href="service.html">Read More</a>
+            </div>
+        </div>
+
+        <!-- Carousel Item 3 -->
+        <div class="custom-carousel-item mx-auto">
+            <div class="custom-caption-box text-center p-3">
+                <h3 class="display-5 mb-4 text-capitalize"
+                    style="font-family: 'Playfair Display', serif; font-size: 50px;">
+                    Your Product Deserves Zero Bugs. We Deliver That
+                </h3>
+                <p>Streamline your QA Process with Bugless Solution</p>
+                <a class="btn btn-dark rounded-pill py-3 px-5 mb-4 me-4" href="#">Book Now</a>
+                <a class="btn btn-dark rounded-pill py-3 px-5 mb-4" href="service.html">Read More</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Custom Carousel Background Section End -->
+
+ 
+
+        
+        <!-- Services Start -->
+        <div class="container-fluid service py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                    <h4 class="text-white py-2 px-4 ms-2"style="font-family: 'Playfair Display', serif;">Our Services</h4>
+                    <h1 class="display-4" style="font-family: 'Playfair Display', serif;"> Precision QA Services to Power Your Next Big Launch</h1>
+                </div>
+                <div class="row g-4 justify-content-center text-center">
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item bg-light rounded">
+                            <div class="service-img">
+                                <img src="img/2.jpeg" class="img-fluid w-100 rounded-top" alt="">
+                            </div>
+                            <div class="service-content text-center p-4">
+                                <div class="service-content-inner">
+                                    <a href="#" class="h4 mb-4 d-inline-flex text-start"><i class="fas fa-donate fa-2x me-2"></i> Manual Testing</a>
+                                    <p class="mb-4">We click, tap, swipe & poke till bugs scream for mercy!
+
+                                    </p>
+                                    <a class="btn btn-light rounded-pill py-2 px-4" href="contact.html">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item bg-light rounded">
+                            <div class="service-img">
+                                <img src="img/1.jpeg" class="img-fluid w-100 rounded-top" alt="">
+                            </div>
+                            <div class="service-content text-center p-4">
+                                <div class="service-content-inner">
+                                    <a href="#" class="h4 mb-4 d-inline-flex text-start"><i class="fas fa-donate fa-2x me-2"></i> QA Consultancy</a>
+                                    <p class="mb-4">Got quality issues? We whisper secrets only bugs understand!
+                                    </p>
+                                    <a class="btn btn-light rounded-pill py-2 px-4" href="contact.html">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item bg-light rounded">
+                            <div class="service-img">
+                                <img src="img/3.jpeg" class="img-fluid w-100 rounded-top" alt="">
+                            </div>
+                            <div class="service-content text-center p-4">
+                                <div class="service-content-inner">
+                                    <a href="#" class="h4 mb-4 d-inline-flex text-start"><i class="fas fa-donate fa-2x me-2"></i> Performance Testing</a>
+                                    <p class="mb-4">We race your app till it sweats digital bullets!
+
+                                    </p>
+                                    <a class="btn btn-light rounded-pill py-2 px-4" href="contact.html">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="service-item bg-light rounded">
+                            <div class="service-img">
+                                <img src="img/4.jpeg" class="img-fluid w-100 rounded-top" alt="">
+                            </div>
+                            <div class="service-content text-center p-4">
+                                <div class="service-content-inner">
+                                    <a href="#" class="h4 mb-4 d-inline-flex text-start"><i class="fas fa-donate fa-2x me-2"></i> Automation Testing</a>
+                                    <p class="mb-4">Bots on duty 24/7—no bug sleeps safe!
+                                    </p>
+                                    <a class="btn btn-light rounded-pill py-2 px-4" href="contact.html">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <a class="btn btn-primary rounded-pill py-3 px-5 wow fadeInUp" data-wow-delay="0.1s" href="#">More Services</a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Carousel End -->
-        
-        
- <!-- About Start -->
+        <!-- Services End -->
+
+       
+          <!-- Project Start -->
+             <div class="container-fluid project">
+                <div class="container">
+                    <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                        <h4 class="text-white py-2 px-4 ms-2"style="font-family: 'Playfair Display', serif;">Our Projects</h4>
+                        <h1 class="display-4"  style="font-family: 'Playfair Display', serif;" >Explore Our Latest Projects</h1>
+                    </div>
+                    <div class="project-carousel owl-carousel wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="project-item h-100 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="project-img">
+                                <img src="img/5.jpeg" class="img-fluid w-100 rounded" alt="Image">
+                            </div>
+                            <div class="project-content bg-light rounded p-4">
+                                <div class="project-content-inner">
+                                    <div class="project-icon mb-3"><i class="fas fa-bug  fa-4x text-primary" size></i></div>
+                                    <p class="text-dark fs-5 mb-3">Manual Testing Projects
+    
+                                    </p>
+                                    <a href="man.html" class="h4">Core Banking System (Istelar)</a>
+                                    <div class="pt-4">
+                                        <a class="btn btn-light rounded-pill py-3 px-5" href="#">Explore</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-item h-100 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="project-img">
+                                <img src="img/5.jpeg" class="img-fluid w-100 rounded" alt="Image">
+                            </div>
+                            <div class="project-content bg-light rounded p-4">
+                                <div class="project-content-inner">
+                                    <div class="project-icon mb-3"><i class="fas fa-bug  fa-4x text-primary"></i></div>
+                                    <p class="text-dark fs-5 mb-3">Manual Testing Project</p>
+                                    <a href="#" class="h4"> HR and Payroll System (People Hub)</a>
+                                    <div class="pt-4">
+                                        <a class="btn btn-light rounded-pill py-3 px-5" href="man.html">Explore</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="img/5.jpeg" class="img-fluid w-100 rounded" alt="Image">
+                            </div>
+                            <div class="project-content bg-light rounded p-4">
+                                <div class="project-content-inner">
+                                    <div class="project-icon mb-3"><i class="fas fa-bug  fa-4x text-primary"></i></div>
+                                    <p class="text-dark fs-5 mb-3">Manual Testing Project</p>
+                                    <a href="#" class="h4">Document and Queue Management System (DQMS)
+                                    </a>
+                                    <div class="pt-4">
+                                        <a class="btn btn-light rounded-pill py-3 px-5" href="man.html">Explore</a>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="project-item h-100 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="project-img">
+                                    <img src="img/5.jpeg" class="img-fluid w-100 rounded" alt="Image">
+                                </div>
+                                <div class="project-content bg-light rounded p-4">
+                                    <div class="project-content-inner">
+                                        <div class="project-icon mb-3"><i class="fas fa-bug  fa-4x text-primary"></i></div>
+                                        <p class="text-dark fs-5 mb-3">Manual Testing Project</p>
+                                        <a href="#" class="h4"> HR and Payroll System (People Hub)</a>
+                                        <div class="pt-4">
+                                            <a class="btn btn-light rounded-pill py-3 px-5" href="man.html">Explore</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-item h-100 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="project-img">
+                                    <img src="img/5.jpeg" class="img-fluid w-100 rounded" alt="Image">
+                                </div>
+                                <div class="project-content bg-light rounded p-4">
+                                    <div class="project-content-inner">
+                                        <div class="project-icon mb-3"><i class="fas fa-bug  fa-4x text-primary"></i></div>
+                                        <p class="text-dark fs-5 mb-3">API Testing Project</p>
+                                        <a href="#" class="h4"> Multiple (Internal to ERA InfoTech)
+                                        </a>
+                                        <div class="pt-4">
+                                            <a class="btn btn-light rounded-pill py-3 px-5" href="perform.html">Explore</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-item h-100 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="project-img">
+                                    <img src="img/5.jpeg" class="img-fluid w-100 rounded" alt="Image">
+                                </div>
+                                <div class="project-content bg-light rounded p-4">
+                                    <div class="project-content-inner">
+                                        <div class="project-icon mb-3"><i class="fas fa-bug  fa-4x text-primary"></i></div>
+                                        <p class="text-dark fs-5 mb-3">Mobile App Testing Project</p>
+                                        <a href="#" class="h4"> Facebook App Testing (TesterWork.com)</a>
+                                        <div class="pt-4">
+                                            <a class="btn btn-light rounded-pill py-3 px-5" href="perform.html">Explore</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-item h-100 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="project-img">
+                                    <img src="img/5.jpeg" class="img-fluid w-100 rounded" alt="Image">
+                                </div>
+                                <div class="project-content bg-light rounded p-4">
+                                    <div class="project-content-inner">
+                                        <div class="project-icon mb-3"><i class="fas fa-bug  fa-4x text-primary"></i></div>
+                                        <p class="text-dark fs-5 mb-3">Automation Testing Project</p>
+                                        <a href="#" class="h4"> Multiple Projects (ERA InfoTech + Freelance)
+                                        </a>
+                                        <div class="pt-4">
+                                            <a class="btn btn-light rounded-pill py-3 px-5" href="auto.html">Explore</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-item h-100 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="project-img">
+                                    <img src="img/5.jpeg" class="img-fluid w-100 rounded" alt="Image">
+                                </div>
+                                <div class="project-content bg-light rounded p-4">
+                                    <div class="project-content-inner">
+                                        <div class="project-icon mb-3"><i class="fas fa-bug  fa-4x text-primary"></i></div>
+                                        <p class="text-dark fs-5 mb-3">Manual Testing Project</p>
+                                        <a href="#" class="h4">  Enterprise Financial Solution (EFS)</a>
+                                        <div class="pt-4">
+                                            <a class="btn btn-light rounded-pill py-3 px-5" href="man.html">Explore</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Project End -->
+
+<!-- About Start -->
  <div class="container-fluid about bg-light py-5">
     <div class="container py-5">
         <div class="row g-5 align-items-center">
@@ -261,228 +519,6 @@
     </div>
 </div>
 <!-- About End -->
-
-        
-        <!-- Services Start -->
-        <div class="container-fluid service py-5">
-            <div class="container py-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-                    <h4 class="text-white py-2 px-4 ms-2"style="font-family: 'Playfair Display', serif;">Our Services</h4>
-                    <h1 class="display-4" style="font-family: 'Playfair Display', serif;"> Precision QA Services to Power Your Next Big Launch</h1>
-                </div>
-                <div class="row g-4 justify-content-center text-center">
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item bg-light rounded">
-                            <div class="service-img">
-                                <img src="img/2.jpeg" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="service-content text-center p-4">
-                                <div class="service-content-inner">
-                                    <a href="#" class="h4 mb-4 d-inline-flex text-start"><i class="fas fa-donate fa-2x me-2"></i> Manual Testing</a>
-                                    <p class="mb-4">We click, tap, swipe & poke till bugs scream for mercy!
-
-                                    </p>
-                                    <a class="btn btn-light rounded-pill py-2 px-4" href="contact.html">Order Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item bg-light rounded">
-                            <div class="service-img">
-                                <img src="img/1.jpeg" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="service-content text-center p-4">
-                                <div class="service-content-inner">
-                                    <a href="#" class="h4 mb-4 d-inline-flex text-start"><i class="fas fa-donate fa-2x me-2"></i> QA Consultancy</a>
-                                    <p class="mb-4">Got quality issues? We whisper secrets only bugs understand!
-                                    </p>
-                                    <a class="btn btn-light rounded-pill py-2 px-4" href="contact.html">Order Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item bg-light rounded">
-                            <div class="service-img">
-                                <img src="img/3.jpeg" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="service-content text-center p-4">
-                                <div class="service-content-inner">
-                                    <a href="#" class="h4 mb-4 d-inline-flex text-start"><i class="fas fa-donate fa-2x me-2"></i> Performance Testing</a>
-                                    <p class="mb-4">We race your app till it sweats digital bullets!
-
-                                    </p>
-                                    <a class="btn btn-light rounded-pill py-2 px-4" href="contact.html">Order Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="service-item bg-light rounded">
-                            <div class="service-img">
-                                <img src="img/4.jpeg" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="service-content text-center p-4">
-                                <div class="service-content-inner">
-                                    <a href="#" class="h4 mb-4 d-inline-flex text-start"><i class="fas fa-donate fa-2x me-2"></i> Automation Testing</a>
-                                    <p class="mb-4">Bots on duty 24/7—no bug sleeps safe!
-                                    </p>
-                                    <a class="btn btn-light rounded-pill py-2 px-4" href="contact.html">Order Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <a class="btn btn-primary rounded-pill py-3 px-5 wow fadeInUp" data-wow-delay="0.1s" href="#">More Services</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Services End -->
-
-       
-        <!-- Project Start -->
-        <div class="container-fluid project">
-            <div class="container">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-                    <h4 class="text-white py-2 px-4 ms-2"style="font-family: 'Playfair Display', serif;">Our Projects</h4>
-                    <h1 class="display-4"  style="font-family: 'Playfair Display', serif;" >Explore Our Latest Projects</h1>
-                </div>
-                <div class="project-carousel owl-carousel wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="project-item h-100 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="project-img">
-                            <img src="img/5.jpeg" class="img-fluid w-100 rounded" alt="Image">
-                        </div>
-                        <div class="project-content bg-light rounded p-4">
-                            <div class="project-content-inner">
-                                <div class="project-icon mb-3"><i class="fa-solid fa-bug fa-4x text-primary" size></i></div>
-                                <p class="text-dark fs-5 mb-3">Manual Testing Projects
-
-                                </p>
-                                <a href="#" class="h4">Core Banking System (Istelar)</a>
-                                <div class="pt-4">
-                                    <a class="btn btn-light rounded-pill py-3 px-5" href="man.html">Explore</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-item h-100 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="project-img">
-                            <img src="img/5.jpeg" class="img-fluid w-100 rounded" alt="Image">
-                        </div>
-                        <div class="project-content bg-light rounded p-4">
-                            <div class="project-content-inner">
-                                <div class="project-icon mb-3"><i class="fa-solid fa-bug fa-4x text-primary"></i></div>
-                                <p class="text-dark fs-5 mb-3">Manual Testing Project</p>
-                                <a href="#" class="h4"> HR and Payroll System (People Hub)</a>
-                                <div class="pt-4">
-                                    <a class="btn btn-light rounded-pill py-3 px-5" href="man.html">Explore</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="img/5.jpeg" class="img-fluid w-100 rounded" alt="Image">
-                        </div>
-                        <div class="project-content bg-light rounded p-4">
-                            <div class="project-content-inner">
-                                <div class="project-icon mb-3"><i class="fa-solid fa-bug fa-4x text-primary"></i></div>
-                                <p class="text-dark fs-5 mb-3">Manual Testing Project</p>
-                                <a href="#" class="h4">Document and Queue Management System (DQMS)
-                                </a>
-                                <div class="pt-4">
-                                    <a class="btn btn-light rounded-pill py-3 px-5" href="man.html">Explore</a>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="project-item h-100 wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="project-img">
-                                <img src="img/5.jpeg" class="img-fluid w-100 rounded" alt="Image">
-                            </div>
-                            <div class="project-content bg-light rounded p-4">
-                                <div class="project-content-inner">
-                                    <div class="project-icon mb-3"><i class="fa-solid fa-bug fa-4x text-primary"></i></div>
-                                    <p class="text-dark fs-5 mb-3">Manual Testing Project</p>
-                                    <a href="#" class="h4"> HR and Payroll System (People Hub)</a>
-                                    <div class="pt-4">
-                                        <a class="btn btn-light rounded-pill py-3 px-5" href="man.html">Explore</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-item h-100 wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="project-img">
-                                <img src="img/5.jpeg" class="img-fluid w-100 rounded" alt="Image">
-                            </div>
-                            <div class="project-content bg-light rounded p-4">
-                                <div class="project-content-inner">
-                                    <div class="project-icon mb-3"><i class="fa-solid fa-bug fa-4x text-primary"></i></div>
-                                    <p class="text-dark fs-5 mb-3">API Testing Project</p>
-                                    <a href="#" class="h4"> Multiple (Internal to ERA InfoTech)
-                                    </a>
-                                    <div class="pt-4">
-                                        <a class="btn btn-light rounded-pill py-3 px-5" href="perform.html">Explore</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-item h-100 wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="project-img">
-                                <img src="img/5.jpeg" class="img-fluid w-100 rounded" alt="Image">
-                            </div>
-                            <div class="project-content bg-light rounded p-4">
-                                <div class="project-content-inner">
-                                    <div class="project-icon mb-3"><i class="fa-solid fa-bug fa-4x text-primary"></i></div>
-                                    <p class="text-dark fs-5 mb-3">Mobile App Testing Project</p>
-                                    <a href="#" class="h4"> Facebook App Testing (TesterWork.com)</a>
-                                    <div class="pt-4">
-                                        <a class="btn btn-light rounded-pill py-3 px-5" href="perform.html">Explore</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-item h-100 wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="project-img">
-                                <img src="img/5.jpeg" class="img-fluid w-100 rounded" alt="Image">
-                            </div>
-                            <div class="project-content bg-light rounded p-4">
-                                <div class="project-content-inner">
-                                    <div class="project-icon mb-3"><i class="fa-solid fa-bug fa-4x text-primary"></i></div>
-                                    <p class="text-dark fs-5 mb-3">Automation Testing Project</p>
-                                    <a href="#" class="h4"> Multiple Projects (ERA InfoTech + Freelance)
-                                    </a>
-                                    <div class="pt-4">
-                                        <a class="btn btn-light rounded-pill py-3 px-5" href="auto.html">Explore</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-item h-100 wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="project-img">
-                                <img src="img/5.jpeg" class="img-fluid w-100 rounded" alt="Image">
-                            </div>
-                            <div class="project-content bg-light rounded p-4">
-                                <div class="project-content-inner">
-                                    <div class="project-icon mb-3"><i class="fa-solid fa-bug fa-4x text-primary"></i></div>
-                                    <p class="text-dark fs-5 mb-3">Manual Testing Project</p>
-                                    <a href="#" class="h4">  Enterprise Financial Solution (EFS)</a>
-                                    <div class="pt-4">
-                                        <a class="btn btn-light rounded-pill py-3 px-5" href="man.html">Explore</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Project End -->
-
-
-
 
        <!-- Team Start -->
        <div class="container-fluid team py-5">

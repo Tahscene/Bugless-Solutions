@@ -7,41 +7,93 @@
     transition: opacity .5s ease-out, visibility 0s linear .5s;
     z-index: 99999;
 }
-
-/* Default Bootstrap dropdown look stays as is */
-
-/* This hover style will apply only when .custom-hover-enabled is added */
-.custom-hover-enabled .dropdown-item {
-    background-color: black;
-    color: white;
+/* Gradient background on top and bottom */
+.custom-carousel-bg {
+    
+    padding: 100px 0;
 }
 
-.custom-hover-enabled .dropdown-item:hover {
-    background-color: white;
-    color: black;
-}
-.header-carousel-item {
-    position: relative;
-    height: 100vh; /* Take full viewport height */
-    overflow: hidden;
+/* Remove card look */
+.custom-carousel-item {
+    padding: 0;
 }
 
+/* Transparent content box (no card look) */
+.custom-caption-box {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 30px 10px;
+}
+.custom-black-text{
+    color:black;
+}
+.custom-white-text{
+    color:white;
+}
+/* Text styling */
+.custom-caption-box h3,
+.custom-caption-box h5 {
+    color: #4169E1;
+    animation: slideInUp 1s ease-in-out forwards;
+}
+
+.custom-caption-box p {
+    color: #333;
+    font-size: 18px;
+    animation: slideInUp 1.5s ease-in-out forwards;
+}
+
+/* Button styling */
+.custom-caption-box .btn-dark {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    transition: 0.3s;
+}
+
+.custom-caption-box .btn-dark:hover {
+    background-color: #ffffff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+/* Slide-in animation keyframes */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Base style for carousel image */
 .carousel-img {
-    object-fit: contain;
+    object-fit: cover;
     width: 100%;
-    height: 100vh;  /* Ensure it fits your laptop screen height */
-    max-height: 100vh;
-    display: block;
-    margin: 0 auto;
+    height: auto;
+    animation: slideInUp 1s ease;
 }
 
+/* Responsive adjustments for tablets and smaller devices */
 @media (max-width: 768px) {
     .carousel-img {
         object-fit: contain;
-        height: auto;
         max-height: 70vh;
     }
 }
+
+/* Additional tweak for smaller devices like iPhone 13 */
+@media (max-width: 430px) {
+    .carousel-img {
+        max-height: 60vh;
+        padding: 0 10px;
+    }
+}
+
 
 
 
@@ -300,6 +352,7 @@
 
 /*** Carousel Header Start ***/
 .header-carousel .header-carousel-item {
+    background: white;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -376,7 +429,7 @@
     top: -150px;
     left: 70px;
     transform: rotate(-30deg);
-    background: rgba(68, 210, 246, 0.2);
+    background: rgb(31, 62, 112);
     animation: RotateMoveRight 5s linear infinite;
     z-index: 2 !important;
 }
