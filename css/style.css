@@ -604,7 +604,22 @@ html, body {
     position: relative;
     z-index: 2;
 }
+/* Make brand text responsive */
+.headline {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    white-space: nowrap;
+}
 
+@media (max-width: 576px) {
+    .headline {
+        font-size: 0.9rem;
+    }
+
+    .navbar-brand img {
+        height: 40px !important;
+    }
+}
 .custom-caption-box {
     z-index: 3;
     position: relative;
