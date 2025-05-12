@@ -222,6 +222,7 @@ html, body {
 
 /*** Topbar ***/
 .topbar {
+    
     padding: 2px 10px 2px 20px;
     background: var(--bs-dark) !important;
 }
@@ -343,6 +344,46 @@ html, body {
         margin: 15px 0 !important;
     }
 } 
+/*extra*/
+
+
+/* HEADER/ NAVBAR FIX */
+.sticky-top {
+    top: 0;
+    z-index: 1030; /* Ensure it's above other elements */
+    background-color: white; /* Prevents background from being transparent on scroll */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Optional: subtle shadow */
+}
+
+/* Optional: Navbar background when scrolling */
+.navbar {
+    background-color: white !important;
+}
+
+/* Ensure dropdowns are above other content */
+.navbar .dropdown-menu {
+    z-index: 1050;
+}
+
+/* Prevent header background (blue) from sliding down */
+.custom-carousel-bg {
+    padding: 100px 0;
+  
+    position: relative;
+    z-index: 1;
+}
+
+/* Make sure carousel doesn't push the background */
+.carousel-item {
+    z-index: 2;
+    position: relative;
+}
+
+/* Avoid header overlapping content on scroll */
+
+
+/*extra */
+
 
 /*** Carousel Header Start ***/
 .header-carousel .header-carousel-item {
