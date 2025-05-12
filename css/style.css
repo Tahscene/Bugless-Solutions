@@ -239,6 +239,10 @@
 
 /*** Navbar ***/
 /* ===== FIX: Mobile Navbar Sticky and Overflow ===== */
+/* ===== Navbar & Gap Fixes ===== */
+/* ===== FIX: Mobile Navbar Sticky and Overflow ===== */
+
+/* ===== FIX: Mobile Navbar Sticky and Overflow ===== */
 
 /* Disable sticky behavior on mobile */
 @media (max-width: 991px) {
@@ -351,38 +355,14 @@
     background: rgba(250, 250, 250, .6);
 }
 
-
-/* ===== Fix for "Start Debugging" button on mobile ===== */
-
-/* Ensure button aligns properly on all screen sizes */
-.d-flex.align-items-center.flex-nowrap {
-    display: flex;
-    justify-content: center; /* Center button on all devices */
-}
-
-/* Button tweaks for mobile */
-@media (max-width: 991px) {
-    .d-flex.align-items-center.flex-nowrap {
-        justify-content: center; /* Make sure the button stays centered */
-        padding-top: 15px; /* Add some space if needed */
-    }
-
-    .btn-start-debugging {
-        width: 100%; /* Make button full width on mobile if necessary */
-        padding: 12px 20px; /* Adjust button padding for mobile */
-    }
-}
-
-/* Button tweaks for desktop and tablet */
-@media (min-width: 992px) {
-    .btn-start-debugging {
-        padding: 10px 25px; /* Adjust padding for larger screens */
-    }
-}
-
-
 /* ===== END of Navbar CSS ===== */
 
+/* Optional: You may also need some media queries for custom screen sizes */
+@media (max-width: 991px) {
+    .navbar .navbar-nav .nav-item.nav-link {
+        margin: 15px 0 !important;
+    }
+}
 
 
 /*** Carousel Header Start ***/
