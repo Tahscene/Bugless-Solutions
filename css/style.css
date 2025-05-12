@@ -310,6 +310,18 @@
         z-index: 9;
     }
 }
+/* Add media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .navbar .navbar-collapse {
+        display: block;
+        width: 100%;
+    }
+    
+    .navbar-toggler {
+        display: block;
+        z-index: 1050; /* Ensure toggler is above content */
+    }
+}
 
 @media (max-width: 1200px) {
     .navbar .nav-item .dropdown-menu {
