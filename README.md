@@ -2,7 +2,24 @@
 <p><strong>Bugless Solution</strong> is a software testing and IT consulting platform designed to help businesses ensure product quality through professional QA services.</p>
 
 
-<img src="images/bugless-solution-home.png" alt="Bugless Solution Homepage Screenshot" width="100%" style="border: 1px solid #ccc; border-radius: 8px; margin-top: 10px;" />
+<div style="text-align: center;">
+  <img src="https://github.com/Tahscene/Bugless-Solutions/blob/main/Screenshot%202025-05-16%20201825.png?raw=true" 
+       alt="Bugless Solution Screenshot" 
+       width="40%" 
+       style="border-radius: 8px; border: 1px solid #ccc; margin: 10px;" />
+
+  <img src="https://github.com/Tahscene/Bugless-Solutions/blob/main/Screenshot%202025-05-16%20201845.png?raw=true" 
+       alt="Bugless Solution Screenshot" 
+       width="40%" 
+       style="border-radius: 8px; border: 1px solid #ccc; margin: 10px;" />
+
+  <img src="https://github.com/Tahscene/Bugless-Solutions/blob/main/Screenshot%202025-05-16%20201921.png?raw=true" 
+       alt="Bugless Solution Screenshot" 
+       width="40%" 
+       style="border-radius: 8px; border: 1px solid #ccc; margin: 10px;" />
+</div>
+
+
 
 <h2>🛠️ Project Overview</h2>
 <p>
